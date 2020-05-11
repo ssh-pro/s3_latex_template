@@ -1017,24 +1017,23 @@
         {\footnotesize \@date}%
         \begin{center}
           \mbox{} \\[1zw]
-          \large
           {\maybeblue\hrule height0\jsc@mpt depth2\jsc@mpt\relax}\par
           \jsc@smallskip
-          \@title
+          {\gt\fontsize{14pt}{0pt}\selectfont \@title }%タイトルのフォントサイズ はここ
           \jsc@smallskip
           {\maybeblue\hrule height0\jsc@mpt depth2\jsc@mpt\relax}\par
           \vfill
-          {\small \@author}%
+          {\mc\fontsize{12pt}{0pt} \selectfont \@author }%著者のフォントサイズ はここ
         \end{center}
       \else
       \vskip 60\jsc@mpt
       \begin{center}%
-        {\LARGE \@title \par}%
+        {{\gt\fontsize{14pt}{0pt}\selectfont  \@title}\par}%タイトルのフォントサイズ はここ
         \vskip 3em%
         {\large
           \lineskip .75em
           \begin{tabular}[t]{c}%
-            \@author
+            {\mc\fontsize{12pt}{0pt} \selectfont \@author }%著者のフォントサイズ はここ
           \end{tabular}\par}%
         \vskip 1.5em
         {\large \@date \par}%
@@ -1088,18 +1087,20 @@
     \global\let\author\relax
     \global\let\date\relax
     \global\let\and\relax
+
+
   }
   \def\@maketitle{%
     \newpage\null
     \vskip 2em
     \begin{center}%
       \let\footnote\thanks
-      {\LARGE \@title \par}%
+      {\gt\fontsize{14pt}{0pt} \selectfont \@title \par}%タイトルのフォントサイズ はここ
       \vskip 1.5em
       {\large
         \lineskip .5em
         \begin{tabular}[t]{c}%
-          \@author
+          {\mc\fontsize{12pt}{0pt} \selectfont \@author \par}%著者のフォントサイズ はここ
         \end{tabular}\par}%
       \vskip 1em
       {\large \@date}%
@@ -1877,7 +1878,7 @@
 \newcommand{\figurename}{\if@english Fig.~\else 図\fi}
 \newcommand{\tablename}{\if@english Table~\else 表\fi}
 \newcommand{\appendixname}{\if@english \else 付録\fi}
-\newcommand{\abstractname}{\if@english Abstract\else 概要\fi}
+\newcommand{\abstractname}{\if@english Abstract\else 要旨\fi}
 \newif\if西暦 \西暦true
 \def\西暦{\西暦true}
 \def\和暦{\西暦false}
