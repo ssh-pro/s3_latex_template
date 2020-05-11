@@ -1,87 +1,15 @@
 %This \LaTeX\ template is released into the public domain by the copyright holders.
-<<<<<<< HEAD
 \documentclass[10.5pt]{jsarticle}
 \usepackage{sounin}
-
-=======
-\documentclass[11pt]{jsarticle}
-
-\makeatletter
-\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
-{0.1\Cvs}{0.0\Cvs}
-{\gt\fontsize{11pt}{0cm}}}
-
-\renewcommand\section{\@startsection {section}{1}{\z@}
-{0.1\Cvs}{0.0\Cvs}
-{\gt\fontsize{11.4pt}{0cm}}}
-
-\renewcommand\part{
-  \setcounter{section}{0}
-  \if@noskipsec \leavevmode \fi
-  \par\addvspace{2ex}
-  \@afterindenttrue
-  \secdef\@part\@spart}
-\def\@part[#1]#2{
-  \ifnum \c@secnumdepth >\m@ne
-    \refstepcounter{part}
-    \addcontentsline{toc}{part}{
-       \prepartname\thepart\postpartname\hspace{1zw}#1}
-  \else
-    \addcontentsline{toc}{part}{#1}
-  \fi
-  \markboth{}{}
-  {\parindent\z@\raggedright
-   \interlinepenalty\@M\normalfont
-   \ifnum \c@secnumdepth >\m@ne
-     \gt\fontsize{11.4pt}{0cm}
-     \par\nobreak
-   \fi
-   \gt\fontsize{11.4pt}{0cm}#2\par}
-  \nobreak\vskip0ex\@afterheading}
-
-\renewcommand{\abstractname}{\fontsize{9.4pt}{0cm}要旨}
-
-%%%文字列と余白の指定%%%
-\def\mojiparline{46}
-\def\linesparpage{38}
-\usepackage [top=25.4truemm, bottom=25.4truemm, left=19truemm, right=19truemm] {geometry}
-
-\textwidth = \mojiparline zw
-\textheight = \linesparpage\baselineskip
-\advance\textheight by -1\baselineskip
-\advance\textheight by 1zw
-\topmargin=\paperheight
-\advance\topmargin by -\textheight
-\divide\topmargin by 2
-\advance\topmargin by -1truein
-\advance\topmargin by -\headheight
-\advance\topmargin by -\headsep
-\oddsidemargin=\paperwidth
-\advance\oddsidemargin by -\textwidth
-\divide\oddsidemargin by 2
-\advance\oddsidemargin by -1truein
-\evensidemargin=\paperwidth
-\advance\evensidemargin by -\textwidth
-\divide\evensidemargin by 2
-\advance\evensidemargin by -1truein
-\topskip = 0.88zw
-\makeatother
->>>>>>> 52b3d5eb918a9a114fb87ff10fa903dd395a735a
-
 \usepackage{graphicx}
 \usepackage[dvipdfmx]{color}
 \usepackage{url}
 \pagestyle{empty}
 
-<<<<<<< HEAD
+
 \title{
 高三総合人間科 \LaTeX テンプレートファイル}
 \author{
-=======
-\title{\fontsize{14.6pt}{0cm}\gt
-高三総合人間科 \LaTeX テンプレートファイル}
-\author{\fontsize{12.5pt}{0cm}\mc
->>>>>>> 52b3d5eb918a9a114fb87ff10fa903dd395a735a
 名大附　花子}
 \date{}
 
@@ -89,40 +17,52 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-<<<<<<< HEAD
-
+各段落の最初の一文をつなぐと、要約文ができあがるようにする。現在についてという点で関心が集まっている。先行研究ではが明らかになっている一方でについてはまだわかっていない。そこで本研究においてを研究課題とし、という仮説の下に、を研究した。その結果が明らかになった。本研究にはに対し、という意義があり、今後が期待される。
 \end{abstract}
-=======
-{\mc\fontsize{9.4pt}{0cm}\
-本文一段組，アブスト一段組です．
-}\end{abstract}
->>>>>>> 52b3d5eb918a9a114fb87ff10fa903dd395a735a
 
 
 \part{序論　研究課題について}
 \section{研究の背景}
+現在についてという点で関心が集まっている。先行研究ではが明らかになっている一方でについてはまだわかっていない。そこで本研究においてを研究課題とし、という仮説の下に、を研究した。その結果が明らかになった。本研究にはに対し、という意義があり、今後が期待される。
+
 
 \section{先行研究}
+現在についてという点で関心が集まっている。
+Aとはである。
+Aに関心が集まったのは頃である。その後（時系列順に経緯を書く）、Bという点で注目されるようになった。
 
 \section{研究課題と仮説}
+本研究では〜を明らかにしていく。
+先行研究等の分析から〜という仮説を立てた。
 
 \section{研究の目的と意義}
+この研究によって、〜が明らかになると、〜の点において〜の向上が期待される。
 
 \part{本論 調査結果と考察}
 \section{調査テーマ}
+本調査は〜をテーマとして行った。
 
 \section{調査時期と方法}
+n個の調査を行った。
+〜については文献調査を平成〜年〜月〜日から〜月〜日にかけて行った。
+また、〜については令和〜年〜月〜日に、〜を対象にアンケート調査を行った。
 
 \section{調査結果}
+〜の結果は以下の表の通りである。
 
 \section{考察}
+〜については〜であることが考えられる。
+また、〜に関しては〜であることがはっきりと読み取れる。
+したがって〜であるということが言えるだろう。
 
 \part{結論}
 \section{結論}
-
+〜の結果、仮説が〜であるということが言える。
 \section{今後の展望}
+今回〜については明らかになったが、〜については完全に明らかにすることはできなかった。
+今後は、〜に加え〜のような調査を行うことで、〜に関しても研究していきたいと考えている。
+
 \begin{thebibliography}{2501}
-
+\bibitem{platica} \url{大石隆司『理系数学の良問プラチカ数学I・A・II・B』（河合出版、2014年）}
 \end{thebibliography}
-
 \end{document}
