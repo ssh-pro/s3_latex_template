@@ -1,26 +1,3 @@
-%%
-%% This is file `sounin.cls',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% jsclasses.dtx  (with options: `article')
-%%
-%% IMPORTANT NOTICE:
-%%
-%% For the copyright see the source file.
-%%
-%% Any modified versions of this file must be renamed
-%% with new filenames distinct from sounin.cls.
-%%
-%% For distribution of the original source see the terms
-%% for copying and modification in the file jsclasses.dtx.
-%%
-%% This generated file may be distributed as long as the
-%% original source files, as listed above, are part of the
-%% same distribution. (The sources need not necessarily be
-%% in the same archive or directory.)
-\ifx\epTeXinputencoding\undefined\else
   \epTeXinputencoding utf8 % ^^A added (2017-10-04)
 \fi
 \NeedsTeXFormat{pLaTeX2e}
@@ -1406,18 +1383,18 @@
         \begin{minipage}[b]{\textwidth}
           \small\parindent1zw
           \begin{center}%
-            {{\gt\fontsize{9pt}{0pt} \selectfont \abstractname}\vspace{-.5em}\vspace{\z@}}%
+            {{\gt\fontsize{9pt}{0pt} \selectfont \abstractname} \vspace{-.5em}\vspace{\z@}}%
           \end{center}%
           \list{}{%
             \listparindent\parindent
             \itemindent \listparindent
             \rightmargin \leftmargin}%
-          \item\relax
+          \item{\gt\fontsize{9pt}{0pt} \selectfont \relax}
       \fi
     \else
       \small
       \begin{center}%
-        {{\gt\fontsize{9pt}{0pt} \selectfont \abstractname}\vspace{-.5em}\vspace{\z@}}%
+        {{\it\fontsize{9pt}{0pt} \selectfont \abstractname}\vspace{-.5em}\vspace{\z@}}%
       \end{center}%
       \list{}{%
         \listparindent\parindent
