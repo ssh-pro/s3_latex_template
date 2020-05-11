@@ -1,0 +1,110 @@
+%This \LaTeX\ template is released into the public domain by the copyright holders.
+\documentclass[10.5pt,twocolumn]{jsarticle}
+
+\makeatletter
+\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
+{0.1\Cvs}{0.0\Cvs}
+{\gt\fontsize{10.5pt}{0cm}}}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}
+{0.1\Cvs}{0.0\Cvs}
+{\gt\fontsize{11pt}{0cm}}}
+
+\renewcommand\part{
+  \setcounter{section}{0}
+  \if@noskipsec \leavevmode \fi
+  \par\addvspace{2ex}
+  \@afterindenttrue
+  \secdef\@part\@spart}
+\def\@part[#1]#2{
+  \ifnum \c@secnumdepth >\m@ne
+    \refstepcounter{part}
+    \addcontentsline{toc}{part}{
+       \prepartname\thepart\postpartname\hspace{1zw}#1}
+  \else
+    \addcontentsline{toc}{part}{#1}
+  \fi
+  \markboth{}{}
+  {\parindent\z@\raggedright
+   \interlinepenalty\@M\normalfont
+   \ifnum \c@secnumdepth >\m@ne
+     \gt\fontsize{11pt}{0cm}
+     \par\nobreak
+   \fi
+   \gt\fontsize{11pt}{0cm}#2\par}
+  \nobreak\vskip0ex\@afterheading}
+
+\renewcommand{\abstractname}{要旨}
+
+%%%文字列と余白の指定%%%
+\def\mojiparline{46}
+\def\linesparpage{38}
+\usepackage [top=25.4truemm, bottom=25.4truemm, left=19truemm, right=19truemm] {geometry}
+
+\textwidth = \mojiparline zw
+\textheight = \linesparpage\baselineskip
+\advance\textheight by -1\baselineskip
+\advance\textheight by 1zw
+\topmargin=\paperheight
+\advance\topmargin by -\textheight
+\divide\topmargin by 2
+\advance\topmargin by -1truein
+\advance\topmargin by -\headheight
+\advance\topmargin by -\headsep
+\oddsidemargin=\paperwidth
+\advance\oddsidemargin by -\textwidth
+\divide\oddsidemargin by 2
+\advance\oddsidemargin by -1truein
+\evensidemargin=\paperwidth
+\advance\evensidemargin by -\textwidth
+\divide\evensidemargin by 2
+\advance\evensidemargin by -1truein
+\topskip = 0.88zw
+\makeatother
+
+\usepackage{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{url}
+\pagestyle{empty}
+
+\title{\fontsize{14pt}{0cm}\gt
+高三総合人間科 \LaTeX テンプレートファイル}
+\author{\fontsize{12pt}{0cm}\mc
+名大附　花子}
+\date{}
+
+
+\begin{document}
+\begin{abstract}
+{\mc\fontsize{9pt}{0cm}\
+本文二段組，アブスト一段組です．
+}\end{abstract}
+\maketitle
+
+\part{序論　研究課題について}
+\section{研究の背景}
+
+\section{先行研究}
+
+\section{研究課題と仮説}
+
+\section{研究の目的と意義}
+
+\part{本論 調査結果と考察}
+\section{調査テーマ}
+
+\section{調査時期と方法}
+
+\section{調査結果}
+
+\section{考察}
+
+\part{結論}
+\section{結論}
+
+\section{今後の展望}
+\begin{thebibliography}{2501}
+
+\end{thebibliography}
+
+\end{document}

@@ -1,9 +1,7 @@
-%\documentclass[10.5pt,twocolumn]{jsarticle}
-\documentclass[twocolumn]{jsarticle}
+%This \LaTeX\ template is released into the public domain by the copyright holders.
+\documentclass[10.5pt]{jsarticle}
 
-%
-%コメント外に全角スペースを入れるともれなくクラッシュします．
-%
+
 
 %これを使って，@を記号ではなく文字として認識させます． \makeatotherで閉じます．
 \makeatletter
@@ -20,7 +18,7 @@
 \renewcommand\part{%
   \setcounter{section}{0} %関数の中でもきちんと関数呼び出しができる．これを呼び出さないと，sectionが連続したものになってしまい整合性が取れなくなります．．
   \if@noskipsec \leavevmode \fi
-  \par\addvspace{2ex} %上方向の空白ex　単位はわかりません．
+  \par\addvspace{2ex} %上方向の空白ex 単位はわかりません．
   \@afterindenttrue
   \secdef\@part\@spart}
 \def\@part[#1]#2{%
@@ -39,9 +37,42 @@
      \par\nobreak
    \fi
    \gt\fontsize{11pt}{0cm}#2\par} %\フォントの種類，本文参照\fontsize{11pt}{0cm}#2\par}
-  \nobreak\vskip0ex\@afterheading} %vskip 下方向の空白ex　単位はわかりません．
+  \nobreak\vskip0ex\@afterheading} %vskip 下方向の空白ex 単位はわかりません．
 
- \makeatother
+
+
+
+\renewcommand{\abstractname}{要旨} %abstractが概要と表示されるので，要旨に置き換えています．
+
+
+
+%%%文字列と余白の指定%%%
+\def\mojiparline{46}
+\def\linesparpage{38}
+\usepackage [top=25.4truemm, bottom=25.4truemm, left=19truemm, right=19truemm] {geometry}
+
+
+\textwidth = \mojiparline zw
+\textheight = \linesparpage\baselineskip
+\advance\textheight by -1\baselineskip
+\advance\textheight by 1zw
+\topmargin=\paperheight
+\advance\topmargin by -\textheight
+\divide\topmargin by 2
+\advance\topmargin by -1truein
+\advance\topmargin by -\headheight
+\advance\topmargin by -\headsep
+\oddsidemargin=\paperwidth
+\advance\oddsidemargin by -\textwidth
+\divide\oddsidemargin by 2
+\advance\oddsidemargin by -1truein
+\evensidemargin=\paperwidth
+\advance\evensidemargin by -\textwidth
+\divide\evensidemargin by 2
+\advance\evensidemargin by -1truein
+\topskip = 0.88zw
+
+\makeatother
 
 
 
@@ -50,12 +81,7 @@
   \usepackage[dvipdfmx]{color}
   \usepackage{url}
   \pagestyle{empty}
-  %\usepackage{titlesec}
 
-  \setlength { \textwidth } { 46zw } %1行あたり40文字，これは余白指定より前にやる必要があります
-  \setlength { \textheight } { 38zw } %1枚あたり38行，これは余白指定より前にやる必要があります．
-  \usepackage [top=25.4truemm, bottom=25.4truemm, left=19truemm, right=19truemm] {geometry} %余白の設定
-  \renewcommand{\abstractname}{要旨} %abstractが概要と表示されるので，要旨に置き換えています．
 
 
 %maketitle以前のものは，maketitleコマンドごといじる必要があり分量がとんでもないことになるので，各自以下を参考に改造してしてください．
@@ -64,17 +90,21 @@
 \author{\fontsize{12pt}{0cm}\mc
 名大附　花子}
 \date{}
-
 \begin{document}
+
+
+
+
+
+% ここでmaketitle
+\maketitle
+
+
 
 
 \begin{abstract} %abstractのサイズを規定に合わせています．
 {\mc\fontsize{9pt}{0cm}\
-This \LaTeX\ template is released into the public domain by the copyright holders. I dedicate this \LaTeX\ template to all people who are lazy.
-
 }\end{abstract}
-% ここでmaketitle
-\maketitle
 
 \part{序論　研究課題について}
 
@@ -114,7 +144,7 @@ Texファイルをpdfに変換するには，タイプセットという作業�
 
   \begin{figure}[htbp]
    \begin{center}
-    \includegraphics[width=60mm]{images/makefile.png}
+    \includegraphics[width=60mm]{../images/makefile.png}
    \end{center}
    \caption{コマンド}
    \label{fig:makefile}
@@ -179,7 +209,8 @@ Texファイルをpdfに変換するには，タイプセットという作業�
 \end{figure}
 
 
-\begin{thebibliography}{99}
+
+\begin{thebibliography}{2501}
 \bibitem{texwiki} \url{https://texwiki.texjp.org}
 \bibitem{texwiki_work} \url{https://texwiki.texjp.org/?TeXworks/設定}
 \bibitem{texwiki_atom} \url{https://texwiki.texjp.org/?Atom}
@@ -187,5 +218,12 @@ Texファイルをpdfに変換するには，タイプセットという作業�
 \bibitem{math_latex} 手書きの数字を\LaTeX に変換してくれます \url{https://webdemo.myscript.com/views/math/index.html}
 \bibitem{table_latex} 表を\LaTeX に変換してくれます \url{https://www.tablesgenerator.com/latex_tables#}
 \end{thebibliography}
+
+
+
+
+
+
+
 
 \end{document}
