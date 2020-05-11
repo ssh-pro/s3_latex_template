@@ -1392,8 +1392,8 @@
     \null\vfil
     \@beginparpenalty\@lowpenalty
     \begin{center}%
-      \headfont \abstractname
-      \@endparpenalty\@M
+      {\gt\fontsize{9pt}{0pt} \selectfont \abstractname}% アブストのフォントサイズ はここ
+      \@endparpenalty \@M
     \end{center}}%
   {\par\vfil\null\endtitlepage}
 \else
@@ -1406,7 +1406,7 @@
         \begin{minipage}[b]{\textwidth}
           \small\parindent1zw
           \begin{center}%
-            {\headfont \abstractname\vspace{-.5em}\vspace{\z@}}%
+            {{\gt\fontsize{9pt}{0pt} \selectfont \abstractname}\vspace{-.5em}\vspace{\z@}}%
           \end{center}%
           \list{}{%
             \listparindent\parindent
@@ -1417,7 +1417,7 @@
     \else
       \small
       \begin{center}%
-        {\headfont \abstractname\vspace{-.5em}\vspace{\z@}}%
+        {{\gt\fontsize{9pt}{0pt} \selectfont \abstractname}\vspace{-.5em}\vspace{\z@}}%
       \end{center}%
       \list{}{%
         \listparindent\parindent
@@ -1433,6 +1433,7 @@
       \endlist
     \fi}
 \fi
+
 \newenvironment{verse}{%
   \let \\=\@centercr
   \list{}{%
