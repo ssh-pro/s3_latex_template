@@ -2,3 +2,7 @@
 images/.DS_Store
 comments/.DS_Store
 tmp/
+*/*.aux
+*/*.gz
+*/*.log
+
